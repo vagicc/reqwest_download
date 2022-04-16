@@ -1,0 +1,26 @@
+[package]
+name = "reqwest_download"
+version = "0.1.0"
+edition = "2021"
+
+# 使用 HTTP range 请求头进行部分下载 
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tempdir = "0.3.7"
+tempfile = "3.3.0"
+
+# 错误处理
+error-chain = "0.12.4"
+
+reqwest = { version="0.11.10",features=["socks","json","blocking","cookies","gzip","brotli","multipart","deflate"]}
+tokio = { version="1.17.0", features=["full"]}
+select = "0.5.0"
+url = "2.2.2"
+
+hyper = "0.14.18"
+
+# json
+serde_json = "1.0.79"
+serde_derive = "1.0.136"
+serde = {version = "1.0.136", features = ["derive"] }
